@@ -28,7 +28,8 @@ exports.registerUser = async (req, res) => {
             _id: user._id,
             name: user.name,
             email: user.email,
-            token: generateToken(user._id)
+            token: generateToken(user._id),
+            message: "User registered successfully"
         });
 
     } catch (error) {
@@ -65,7 +66,8 @@ exports.loginUser = async (req, res) => {
             _id: user._id,
             name: user.name,
             email: user.email,
-            token: generateToken(user._id)
+            token: generateToken(user._id),
+            message: "Login successful"
         });
 
     } catch (error) {
